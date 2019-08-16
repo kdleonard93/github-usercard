@@ -85,19 +85,21 @@ function userCards(obj) {
 
   let bio = document.createElement("p");
   bio.textContent = `Bio: ${data.bio}`;
-}
 
-// Appending children
-card.appendChild(img);
-card.appendChild(cardInfo);
-cardInfo.appendChild(name);
-cardInfo.appendChild(username);
-cardInfo.appendChild(local);
-cardInfo.appendChild(profile);
-profile.appendChild(a);
-cardInfo.appendChild(followers);
-cardInfo.appendChild(following);
-cardInfo.appendChild(bio);
+  // Appending children
+  card.appendChild(img);
+  card.appendChild(cardInfo);
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(username);
+  cardInfo.appendChild(local);
+  cardInfo.appendChild(profile);
+  profile.appendChild(a);
+  cardInfo.appendChild(followers);
+  cardInfo.appendChild(following);
+  cardInfo.appendChild(bio);
+
+  return card;
+}
 
 /* List of LS Instructors Github username's: 
   tetondan
