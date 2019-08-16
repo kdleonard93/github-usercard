@@ -52,7 +52,13 @@ const cards = document.querySelector(".cards");
 // Creating the component
 function userCards(obj) {
   let card = document.createElement("div");
-  card.classList.add("div");
+  card.classList.add("card");
+
+  let image = document.createElement("img");
+  image.src = data.avatar_url;
+
+  let cardInfo = document.createElement("div");
+  cardInfo.classList.add("card-info");
 
   let name = document.createElement("h3");
   name.classList.add("name");
@@ -65,10 +71,33 @@ function userCards(obj) {
   let local = document.createElement("p");
   local.textContent = `Location: ${data.location}`;
 
-  // const prof =
-  // let profile = document.createElement("p");
-  // profile.textContent = `Profile: ${data.location}`;
+  let profile = document.createElement("p");
+  let a = document.createElement("a");
+  a.href = data.html_url;
+  a.textContent = data.html_url;
+  profile.textContent = "Profile: ";
+
+  let followers = document.createElement("p");
+  followers.textContent = `Followers: ${data.followers}`;
+
+  let following = document.createElement("p");
+  following.textContent = `Following: ${data.following}`;
+
+  let bio = document.createElement("p");
+  bio.textContent = `Bio: ${data.bio}`;
 }
+
+// Appending children
+card.appendChild(img);
+card.appendChild(cardInfo);
+cardInfo.appendChild(name);
+cardInfo.appendChild(username);
+cardInfo.appendChild(local);
+cardInfo.appendChild(profile);
+profile.appendChild(a);
+cardInfo.appendChild(followers);
+cardInfo.appendChild(following);
+cardInfo.appendChild(bio);
 
 /* List of LS Instructors Github username's: 
   tetondan
