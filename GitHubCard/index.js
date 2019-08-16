@@ -77,7 +77,7 @@ followersArray.forEach(username => {
 const cards = document.querySelector(".cards");
 
 // Creating the component
-function userCards(obj) {
+function userCards(data) {
   let card = document.createElement("div");
   card.classList.add("card");
 
@@ -114,7 +114,7 @@ function userCards(obj) {
   bio.textContent = `Bio: ${data.bio}`;
 
   // Appending children
-  card.appendChild(img);
+  card.appendChild(image);
   card.appendChild(cardInfo);
   cardInfo.appendChild(name);
   cardInfo.appendChild(username);
